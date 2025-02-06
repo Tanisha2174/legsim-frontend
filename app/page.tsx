@@ -6,8 +6,14 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
-  const [offerings, setOfferings] = useState([]);
-
+  type Offering = {
+    link: string;
+    image: string;
+    title: string;
+    description: string;
+  };
+  
+  const [offerings, setOfferings] = useState<Offering[]>([]);
   useEffect(() => {
     const fetchOfferings = async () => {
       try {
@@ -169,7 +175,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-64">
             {offerings.length > 0 ? (
-              offerings.map((offering, index) => (
+              offerings.map((offering: Offering, index: number) => (
                 <a
                   key={index}
                   href={offering.link}
