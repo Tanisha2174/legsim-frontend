@@ -6,10 +6,29 @@ import { Check, Search } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+// Define types for the data structure
+interface Package {
+  name: string;
+  price: string;
+  pricingDetails: string;
+  features: string[];
+  category: string;
+}
+
+interface Hero {
+  title: string;
+  description: string;
+}
+
+interface Data {
+  hero: Hero;
+  packages: Package[];
+}
+
 export default function StartupsAndMSME() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<Data | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredPackages, setFilteredPackages] = useState([]);
+  const [filteredPackages, setFilteredPackages] = useState<Package[]>([]);
 
   useEffect(() => {
     fetch("https://legsim-backend-production.up.railway.app/api/startup-msme")
@@ -93,7 +112,7 @@ export default function StartupsAndMSME() {
                       <div className="mt-auto">
                         <Link href="/contact-us">
                           <Button className="w-full bg-[#462A03] text-[#FFE5C0] py-3 md:text-xl rounded-lg">
-                            CONTACT US NOW →
+                            CONTACT US NOW → 
                           </Button>
                         </Link>
                       </div>
@@ -148,5 +167,6 @@ export default function StartupsAndMSME() {
     </main>
   );
 }
+
 
 
