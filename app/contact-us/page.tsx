@@ -13,15 +13,19 @@ export default function ContactUs() {
     files: [],
   });
 
-  const handleChange = (e) => {
+ 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-  const handleFileChange = (e) => {
-    setFormData({ ...formData, files: e.target.files });
+  
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      setFormData({ ...formData, files : Array.from(e.target.files) });
+    }
   };
+  
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const formDataToSend = new FormData();
 
