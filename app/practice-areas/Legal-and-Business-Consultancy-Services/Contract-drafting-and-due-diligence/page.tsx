@@ -3,7 +3,35 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function PrivateLimited() {
-  const [data, setData] = useState(null);
+  interface HeadingContent {
+    title: string;
+    description: string;
+  }
+  
+  interface Heading {
+    headingTitle: string;
+    content: HeadingContent[];
+  }
+  
+  interface RegulationPoint {
+    title: string;
+    description: string;
+  }
+  
+  interface Regulation {
+    headingTitle: string;
+    description: string;
+    points: RegulationPoint[];
+  }
+  
+  interface Data {
+    title: string;
+    description: string;
+    headings: Heading[];
+    regulations: Regulation[];
+  }
+  
+  const [data, setData] = useState<Data | null>(null);
   const category = "Legal and Business Consultancy";
   const subService = "Contract drafting and due diligence"; // Static, replace with dynamic if needed
 
