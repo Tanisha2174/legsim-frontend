@@ -28,25 +28,25 @@ export default function ContactUs() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const formDataToSend = new FormData();
-
-    Object.keys(formData).forEach((key) => {
+  
+    (Object.keys(formData) as Array<keyof typeof formData>).forEach((key) => {
       if (key === "files") {
-        Array.from(formData.files).forEach((file) => {
+        formData[key].forEach((file) => {
           formDataToSend.append("files", file);
         });
       } else {
-        formDataToSend.append(key, formData[key]);
+        formDataToSend.append(key, formData[key] as string);
       }
     });
-
+  
     try {
-      const response = await fetch("http://localhost:5000/api/contact/submit", {
+      const response = await fetch("https://legsim-backend-production.up.railway.app/api/contact/submit", {
         method: "POST",
         body: formDataToSend,
       });
-
+  
       const result = await response.json();
-
+  
       if (response.ok) {
         alert("Form submitted successfully!");
       } else {
@@ -57,6 +57,7 @@ export default function ContactUs() {
       alert("An error occurred. Please try again later.");
     }
   };
+  
 
   return (
     <main>
