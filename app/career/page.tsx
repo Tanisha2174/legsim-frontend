@@ -52,7 +52,7 @@ export default function Careers() {
       if (response.ok) {
         alert("Application submitted successfully!");
       } else {
-        alert("Error submitting application:", data.message);
+        alert(`Error submitting application: ${data.message}`);
       }
     } catch (error) {
       alert("An error occurred while submitting the application.");
