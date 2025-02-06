@@ -9,7 +9,7 @@ const CompanyRegistration = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/services/Company%20Registration');
+        const response = await fetch('https://legsim-backend-production.up.railway.app/api/services/Company%20Registration');
         const data = await response.json();
         setServices(data);
       } catch (error) {

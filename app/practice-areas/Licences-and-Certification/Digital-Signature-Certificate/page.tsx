@@ -18,7 +18,7 @@ export default function PrivateLimited() {
         console.log("Formatted Sub-service:", formattedSubService); 
 
         const response = await fetch(
-          `http://localhost:5000/api/${formattedCategory}/${formattedSubService}`
+          `https://legsim-backend-production.up.railway.app/api/${formattedCategory}/${formattedSubService}`
         );
         const result = await response.json();
         setData(result);

@@ -20,7 +20,7 @@ export default function Careers() {
   useEffect(() => {
     const fetchRolesAndLocations = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/roles-and-locations");
+        const response = await fetch("https://legsim-backend-production.up.railway.app/api/roles-and-locations");
         const data = await response.json();
         setRoles(data.roles);
         setLocations(data.locations);
@@ -40,7 +40,7 @@ export default function Careers() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/job-applications/apply", {
+      const response = await fetch("https://legsim-backend-production.up.railway.app/api/job-applications/apply", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

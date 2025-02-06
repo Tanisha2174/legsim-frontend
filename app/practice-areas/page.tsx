@@ -11,7 +11,7 @@ export default function PracticeAreas() {
   useEffect(() => {
     const fetchOfferings = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/offerings');
+        const response = await fetch('https://legsim-backend-production.up.railway.app/api/offerings');
         const data = await response.json();
         setOfferings(data);
       } catch (error) {

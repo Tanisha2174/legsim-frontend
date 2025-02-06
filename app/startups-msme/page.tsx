@@ -12,7 +12,7 @@ export default function StartupsAndMSME() {
   const [filteredPackages, setFilteredPackages] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/startup-msme")
+    fetch("https://legsim-backend-production.up.railway.app/api/startup-msme")
       .then((response) => response.json())
       .then((data) => {
         setData(data[0]); // Assuming only one document exists

@@ -9,7 +9,7 @@ const CompliancesReturns = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/services/Compliances%20and%20Returns');
+        const response = await fetch('https://legsim-backend-production.up.railway.app/api/services/Compliances%20and%20Returns');
         const data = await response.json();
         setServices(data);
       } catch (error) {
