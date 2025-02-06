@@ -1,19 +1,26 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
-import { useEffect, useState } from 'react';
+// Define types for each offering
+interface Offering {
+  link: string;
+  title: string;
+  description: string;
+  image: string;
+}
 
 export default function PracticeAreas() {
-  const [offerings, setOfferings] = useState([]);
+  const [offerings, setOfferings] = useState<Offering[]>([]); // Type offerings as an array of Offering objects
 
   useEffect(() => {
     const fetchOfferings = async () => {
       try {
         const response = await fetch('https://legsim-backend-production.up.railway.app/api/offerings');
         const data = await response.json();
-        setOfferings(data);
+        setOfferings(data); // Set the fetched data
       } catch (error) {
         console.error('Error fetching offerings:', error);
       }
@@ -24,31 +31,33 @@ export default function PracticeAreas() {
 
   return (
     <main className="bg-[#ffffff] min-h-screen">
-  <section className="w-full mx-auto py-16 px-6">
-    <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex items-center justify-center">
-        <h2 className="text-4xl sm:text-5xl mb-8 font-extrabold mx-4 text-[#462A03]">OUR OFFERINGS</h2>
-      </div>
+      <section className="w-full mx-auto py-16 px-6">
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-center">
+            <h2 className="text-4xl sm:text-5xl mb-8 font-extrabold mx-4 text-[#462A03]">OUR OFFERINGS</h2>
+          </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-8 md:gap-20">
-        {offerings.map((offering, index) => (
-          <a
-            key={index}
-            href={offering.link}
-            className="bg-[#FFF7EB] p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow block"
-          >
-            <img
-              src={offering.image}
-              alt={offering.title}
-              className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-md mb-4"
-            />
-            <h3 className="text-2xl sm:text-3xl font-bold mb-2 text-[#462A03]">{offering.title}</h3>
-            <p className="text-[#583502] pt-1 text-lg sm:text-xl font-normal">{offering.description}</p>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-8 md:gap-20">
+            {offerings.map((offering, index) => (
+              <a
+                key={index}
+                href={offering.link}
+                className="bg-[#FFF7EB] p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow block"
+              >
+                <img
+                  src={offering.image}
+                  alt={offering.title}
+                  className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-md mb-4"
+                />
+                <h3 className="text-2xl sm:text-3xl font-bold mb-2 text-[#462A03]">{offering.title}</h3>
+                <p className="text-[#583502] pt-1 text-lg sm:text-xl font-normal">{offering.description}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
       <footer className="bg-[#462A03] text-[#FFE5C0]">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-2 md:grid-cols-4 pl-4 sm:pl-8 lg:pl-48 pr-4 sm:pr-8 lg:pr-48 text-lg gap-4">
