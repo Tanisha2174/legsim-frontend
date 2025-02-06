@@ -3,89 +3,70 @@ import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
-const ConsumerCaseFilingConsultancy = () => {
-  const [services, setServices] = useState(null);  // State to hold fetched services data
-  const [error, setError] = useState(false);  // State to track error if data fetch fails
+// Define types for the services data
+interface PreCardContent {
+  title: string;
+  description: string;
+}
+
+interface ServiceItem {
+  name: string;
+  description: string;
+  href: string;
+}
+
+interface ServicesData {
+  preCardContent: PreCardContent;
+  services: ServiceItem[];
+}
+
+const CompliancesReturns = () => {
+  const [services, setServices] = useState<ServicesData | null>(null);
 
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/services/Consumer%20Case%20Filing%20Consultancy');
-        if (!response.ok) {
-          throw new Error('Failed to fetch data');
-        }
+        const response = await fetch('https://legsim-backend-production.up.railway.app/api/services/Consumer%20Case%20Filing%20Consultancy');
         const data = await response.json();
-        setServices(data);  // Set services data if fetch is successful
+        setServices(data);
       } catch (error) {
         console.error('Error fetching services:', error);
-        setError(true);  // Set error if fetch fails
       }
     };
 
     fetchServices();
   }, []);
 
-  if (error) return <div>Error loading services. Please try again later.</div>;  // Show error message if data fetching fails
-  if (!services) return <div>Loading...</div>;  // Show loading message while data is being fetched
+  if (!services) return <div>Loading...</div>;
 
   return (
-    <main className="bg-[#ffffff] flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="w-full mx-auto flex-grow px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl sm:text-5xl md:pl-16 md:text-6xl font-bold text-[#462A03]">{data.title}</h1>
-
-        <p className="text-[#6C4104] md:pl-16 mt-6 text-lg sm:text-2xl md:text-2xl  max-w-7xl">
-          {data.description}
-        </p>
-
-        {headings.map((heading, index) => (
-          <div key={index}>
-            <h2 className="text-2xl md:pl-16 sm:text-3xl md:text-3xl mb-4 font-semibold text-[#462A03] mt-8">
-              {heading.headingTitle}
+    <main className="bg-[#FFF7EB] min-h-screen flex flex-col">
+      <section className="py-12 bg-[#F9F7F2] flex-grow px-6 sm:px-8 lg:px-16">
+        <div className="w-full mx-auto pl-4 sm:pl-16 md:pl-32 lg:pl-48 pr-4 sm:pr-8 lg:pr-16">
+          <div className="flex items-center">
+            <div className="w-80 border-t-2 pr-4 border-[#AC6604]"></div>
+            <h2 className="font-kumbh text-[20px] sm:text-[24px] text-[#AC6604] tracking-wider uppercase">
+              {services.preCardContent.title}
             </h2>
-            <ul className="space-y-4 pl-4 sm:pl-8 md:pl-16 text-lg md:text-2xl sm:text-xl text-[#6C4104]">
-              {heading.content.map((item, idx) => (
-                <li key={idx} className="flex items-start space-x-3">
-                  <span className="text-xl md:text-2xl">✅</span>
-                  <div>
-                    <strong>{item.title}</strong>
-                    <p>{item.description}</p>
+          </div>
+
+          <p className="mt-4 text-[16px] sm:text-[19px] pr-4 sm:pr-8 lg:pr-32 pt-4 pb-4 text-[#462A03] font-inter font-medium leading-relaxed">
+            {services.preCardContent.description}
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+            {services.services.map((service, index) => (
+              <div key={index} className="bg-[#FFF7EB] p-6 rounded-2xl shadow-lg flex flex-col items-start relative hover:shadow-2xl transition transform hover:scale-105">
+                <h3 className="text-[21px] sm:text-[24px] font-semibold font-open text-[#462A03]">{service.name}</h3>
+                <p className="text-[16px] sm:text-[18px] text-[#462A03] font-open font-regular mt-2 leading-relaxed">{service.description}</p>
+                <Link href={service.href} passHref>
+                  <div className="absolute top-4 right-4 w-12 h-12 flex items-center justify-center bg-[#FFE5C0] rounded-full cursor-pointer hover:bg-[#FFD699] transition">
+                    <ArrowUpRight className="w-8 h-8 text-[#462A03]" />
                   </div>
-                </li>
-              ))}
-            </ul>
+                </Link>
+              </div>
+            ))}
           </div>
-        ))}
-
-        {/* Regulations */}
-        {regulations.map((reg, index) => (
-          <div key={index}>
-            <h2 className="text-2xl md:pl-16 sm:text-3xl md:text-3xl font-semibold text-[#462A03] mt-10">
-              {reg.headingTitle}
-            </h2>
-            <p className="text-[#6C4104] md:pl-16 text-lg md:text-2xl sm:text-xl mt-4">{reg.description}</p>
-            <ul className="mt-4 text-lg sm:text-xl md:text-2xl pl-4 sm:pl-8 md:pl-16 text-[#6C4104] space-y-4">
-              {reg.points.map((point, idx) => (
-                <li key={idx}>
-                  <strong>🔹 {point.title}:</strong> {point.description}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-
-        {/* Action Buttons */}
-        <div className="flex pl-4 sm:pl-8 md:pl-16 pb-12 pr-4 sm:pr-8 md:pr-16 space-x-4 mt-8">
-          <Link href="/Terms-and-conditions">
-            <button className="border border-[#6C4104] text-lg sm:text-xl px-4 py-2 rounded-lg hover:bg-[#FFE5C0]">
-              Terms & Conditions
-            </button>
-          </Link>
-          <Link href="/contact-us">
-            <button className="bg-[#AC6604] text-lg sm:text-xl text-white px-4 py-2 rounded-lg hover:bg-[#6C4104]">
-              Get Started →
-            </button>
-          </Link>
         </div>
       </section>
 
@@ -133,4 +114,5 @@ const ConsumerCaseFilingConsultancy = () => {
   );
 };
 
-export default ConsumerCaseFilingConsultancy;
+export default CompliancesReturns;
+

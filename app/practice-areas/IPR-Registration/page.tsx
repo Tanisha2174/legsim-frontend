@@ -3,15 +3,32 @@ import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
+// Define types for the services data
+interface ServiceItem {
+  name: string;
+  description: string;
+  href: string;
+}
+
+interface PreCardContent {
+  title: string;
+  description: string;
+}
+
+interface ServicesData {
+  preCardContent: PreCardContent;
+  services: ServiceItem[];
+}
+
 const IPRRegistration = () => {
-  const [services, setServices] = useState(null);
+  const [services, setServices] = useState<ServicesData | null>(null);  // State for services
 
   useEffect(() => {
     const fetchServices = async () => {
       try {
         const response = await fetch('https://legsim-backend-production.up.railway.app/api/services/IPR%20Registration');
         const data = await response.json();
-        setServices(data);
+        setServices(data);  // Set services data if fetch is successful
       } catch (error) {
         console.error('Error fetching services:', error);
       }
@@ -20,10 +37,11 @@ const IPRRegistration = () => {
     fetchServices();
   }, []);
 
-  if (!services) return <div>Loading...</div>;
+  if (!services) return <div>Loading...</div>;  // Show loading state
 
   return (
     <main className="bg-[#FFF7EB] min-h-screen flex flex-col">
+      {/* Hero Section */}
       <section className="py-12 bg-[#F9F7F2] flex-grow px-6 sm:px-8 lg:px-16">
         <div className="w-full mx-auto pl-4 sm:pl-16 md:pl-32 lg:pl-48 pr-4 sm:pr-8 lg:pr-16">
           <div className="flex items-center">
@@ -98,3 +116,4 @@ const IPRRegistration = () => {
 };
 
 export default IPRRegistration;
+

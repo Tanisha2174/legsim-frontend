@@ -3,15 +3,32 @@ import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
+// Define types for the services data
+interface ServiceItem {
+  name: string;
+  description: string;
+  href: string;
+}
+
+interface PreCardContent {
+  title: string;
+  description: string;
+}
+
+interface ServicesData {
+  preCardContent: PreCardContent;
+  services: ServiceItem[];
+}
+
 const LegalBusinessConsultancy = () => {
-  const [services, setServices] = useState(null);
+  const [services, setServices] = useState<ServicesData | null>(null); // Type the state
 
   useEffect(() => {
     const fetchServices = async () => {
       try {
         const response = await fetch('https://legsim-backend-production.up.railway.app/api/services/Legal%20and%20Business%20Consultancy');
         const data = await response.json();
-        setServices(data);
+        setServices(data);  // Set services data if fetch is successful
       } catch (error) {
         console.error('Error fetching services:', error);
       }
@@ -20,7 +37,10 @@ const LegalBusinessConsultancy = () => {
     fetchServices();
   }, []);
 
-  if (!services) return <div>Loading...</div>;
+  if (!services) return <div>Loading...</div>;  // Show loading message if services is null
+
+  // Destructure data after confirming services is not null
+  const { preCardContent, services: serviceList } = services;
 
   return (
     <main className="bg-[#FFF7EB] min-h-screen flex flex-col">
@@ -29,16 +49,16 @@ const LegalBusinessConsultancy = () => {
           <div className="flex items-center">
             <div className="w-80 border-t-2 pr-4 border-[#AC6604]"></div>
             <h2 className="font-kumbh text-[20px] sm:text-[24px] text-[#AC6604] tracking-wider uppercase">
-              {services.preCardContent.title}
+              {preCardContent.title}
             </h2>
           </div>
 
           <p className="mt-4 text-[16px] sm:text-[19px] pr-4 sm:pr-8 lg:pr-32 pt-4 pb-4 text-[#462A03] font-inter font-medium leading-relaxed">
-            {services.preCardContent.description}
+            {preCardContent.description}
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
-            {services.services.map((service, index) => (
+            {serviceList.map((service, index) => (
               <div key={index} className="bg-[#FFF7EB] p-6 rounded-2xl shadow-lg flex flex-col items-start relative hover:shadow-2xl transition transform hover:scale-105">
                 <h3 className="text-[21px] sm:text-[24px] font-semibold font-open text-[#462A03]">{service.name}</h3>
                 <p className="text-[16px] sm:text-[18px] text-[#462A03] font-open font-regular mt-2 leading-relaxed">{service.description}</p>
@@ -98,3 +118,4 @@ const LegalBusinessConsultancy = () => {
 };
 
 export default LegalBusinessConsultancy;
+
