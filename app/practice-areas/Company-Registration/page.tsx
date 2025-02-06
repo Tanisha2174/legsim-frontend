@@ -3,8 +3,25 @@ import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
+// Define types for the services data
+interface PreCardContent {
+  title: string;
+  description: string;
+}
+
+interface ServiceItem {
+  name: string;
+  description: string;
+  href: string;
+}
+
+interface ServicesData {
+  preCardContent: PreCardContent;
+  services: ServiceItem[];
+}
+
 const CompanyRegistration = () => {
-  const [services, setServices] = useState(null);
+  const [services, setServices] = useState<ServicesData | null>(null);
 
   useEffect(() => {
     const fetchServices = async () => {
