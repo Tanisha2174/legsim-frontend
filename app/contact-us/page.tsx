@@ -10,7 +10,7 @@ export default function ContactUs() {
     email: "",
     phone: "",
     message: "",
-    files: [],
+    files: []  as File[],
   });
 
  
@@ -20,7 +20,7 @@ export default function ContactUs() {
   
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      setFormData({ ...formData, files : Array.from(e.target.files) });
+      setFormData({ ...formData, files : Array.from(e.target.files) as File[] });
     }
   };
   
