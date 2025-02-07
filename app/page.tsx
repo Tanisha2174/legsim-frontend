@@ -42,7 +42,7 @@ export default function Home() {
   </div>
 
   <div className="relative w-full px-4 sm:px-6 lg:px-8 pt-2"> {/* Reduced top padding */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-10 items-center min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-20rem)]">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-10 items-center min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-32rem)]">
       
       {/* Left Column - Logo */}
       <div className="flex flex-col items-center px-4 md:px-20 space-y-1 sm:space-y-6"> {/* Reduced spacing for mobile */}
@@ -73,14 +73,14 @@ export default function Home() {
         </p>
         <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-4 pt-2 sm:pt-4"> {/* Reduced padding for mobile */}
           <Link href="/contact-us">
-            <Button className="bg-[#AC6604] hover:bg-[#462A03] text-[#ffffff] text-base font-normal px-6 sm:px-10 py-3 sm:py-4 rounded-md w-full md:w-auto">
+            <Button className="bg-[#AC6604] hover:bg-[#462A03] text-[#ffffff] text-sm font-normal px-6 sm:px-10 py-3 sm:py-4 rounded-md w-full md:w-auto">
               CONTACT US
             </Button>
           </Link>
           <Link href="/contact-us">
             <Button
               variant="outline"
-              className="text-[#462A03] border-[#FFE5C0] hover:bg-[#FFE5C0]/10 text-base font-normal px-6 sm:px-10 py-3 sm:py-4 rounded-md w-full md:w-auto mt-2 md:mt-0"
+              className="text-[#462A03] border-[#FFE5C0] hover:bg-[#FFE5C0]/10 text-sm font-normal px-6 sm:px-10 py-3 sm:py-4 rounded-md w-full md:w-auto mt-2 md:mt-0"
             >
               FREE CONSULTATION
             </Button>
