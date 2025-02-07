@@ -32,7 +32,7 @@ export default function Home() {
     <main>
       {/* Hero Section */}
 {/* Hero Section */}
-<div className="relative min-h-[calc(100vh-24rem)] sm:min-h-[calc(100vh-24rem)] md:min-h-[calc(100vh-8rem)]">
+<div className="relative min-h-[calc(100vh-16rem)] sm:min-h-[calc(100vh-24rem)] md:min-h-[calc(100vh-8rem)]">
   <div className="absolute inset-0">
     <img
       src="/images/image.jpg"
@@ -42,37 +42,37 @@ export default function Home() {
     <div className="absolute inset-0 bg-[#462A03]/70"></div>
   </div>
 
-  <div className="relative w-full px-4 sm:px-6 lg:px-8 pt-2"> {/* Reduced top padding */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-1 sm:gap-10 items-center min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-20rem)]">
+  <div className="relative w-full px-4 sm:px-6 lg:px-8 pt-2">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-1 sm:gap-10 items-center min-h-[calc(100vh-12rem)] sm:min-h-[calc(100vh-20rem)]">
       
       {/* Left Column - Logo */}
-      <div className="flex flex-col items-center px-4 md:px-20"> {/* Removed space-y */}
+      <div className="flex flex-col items-center px-4 md:px-20">
         {/* Mobile Logo Image */}
         <img
           src="/images/legsim_mobile.png"
           alt="Legsim Logo"
-          className="w-full max-w-[550px] md:hidden h-auto"  // Increased width
+          className="w-full max-w-[400px] sm:max-w-[550px] md:hidden h-auto"
         />
 
         {/* Desktop Logo Image */}
         <img
           src="/images/legsim.png"
           alt="Legsim Logo"
-          className="w-[80%] sm:w-[75%] md:w-[150%] h-auto md:block hidden"
+          className="w-[70%] sm:w-[75%] md:w-[120%] h-auto md:block hidden"
         />
       </div>
 
       {/* Right Column - Text Content */}
-      <div className="text-[#FFE5C0] text-center md:text-left space-y-0 sm:space-y-6 px-4 md:px-0 -mt-2"> {/* Pulled text closer to the image */}
+      <div className="text-[#FFE5C0] text-center md:text-left space-y-2 sm:space-y-6 px-4 md:px-0 mt-0">
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight">
           Growing Businesses.<br />
           Protecting Legacies.
         </h1>
-        <p className="text-lg sm:text-2xl md:text-3xl text-[#ffffff] font-normal">
+        <p className="text-base sm:text-lg md:text-2xl text-[#ffffff] font-normal leading-relaxed">
           Understanding Your Business <br />
           and Protecting Assets
         </p>
-        <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-4 pt-1 sm:pt-4"> {/* Reduced padding */}
+        <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-4 pt-1 sm:pt-4">
           <Link href="/contact-us">
             <Button className="bg-[#AC6604] hover:bg-[#462A03] text-[#ffffff] text-lg font-normal px-6 sm:px-10 py-3 sm:py-4 rounded-md w-full md:w-auto">
               CONTACT US
@@ -210,26 +210,32 @@ export default function Home() {
 
       {/* Free Consultation Section */}
       <section
-        className="relative py-16 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/MEETING.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-[#FFE5C0]/50 backdrop-blur-sm"></div>
-        <div className="relative w-full px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-4xl font-extrabold mb-4 text-[#462A03]">
-            REQUEST A FREE CONSULTATION
-          </h2>
-          <p className="text-[#6C4104] max-w-3xl mx-auto text-lg sm:text-lg font-medium">
-          LEGSIM  is your trusted legal partner, providing expert guidance to startups, entrepreneurs, and established businesses. Whether you need assistance with company registration, intellectual property protection, compliance, or legal disputes, our experienced team offers tailored solutions to meet your specific needs.
+  className="relative py-12 sm:py-16 bg-cover bg-center"
+  style={{ backgroundImage: "url('/images/MEETING.jpg')" }}
+>
+  <div className="absolute inset-0 bg-[#FFE5C0]/50 backdrop-blur-sm"></div>
+  <div className="relative w-full px-6 sm:px-8 lg:px-16 text-center">
+    <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 text-[#462A03]">
+      REQUEST A FREE CONSULTATION
+    </h2>
+    <p className="text-[#6C4104] max-w-3xl mx-auto text-base sm:text-lg font-medium leading-relaxed">
+      LEGSIM is your trusted legal partner, providing expert guidance to startups, entrepreneurs, and
+      established businesses. Whether you need assistance with company registration, intellectual
+      property protection, compliance, or legal disputes, our experienced team offers tailored
+      solutions to meet your specific needs.
+      <br /><br />
+      We simplify complex legal processes, ensuring your business stays protected and compliant.
+      With a client-centric approach, we prioritize transparency, efficiency, and strategic advice to
+      help your business thrive.
+    </p>
+    <Link href="/contact-us">
+      <button className="mt-6 bg-[#462A03] hover:bg-[#6C4104] text-[#FFE5C0] text-lg font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 w-full sm:w-auto">
+        REQUEST A FREE CONSULTATION →
+      </button>
+    </Link>
+  </div>
+</section>
 
-We simplify complex legal processes, ensuring your business stays protected and compliant. With a client-centric approach, we prioritize transparency, efficiency, and strategic advice to help your business thrive.
-          </p>
-          <Link href="/contact-us">
-            <button className="mt-6 bg-[#462A03] hover:bg-[#6C4104] text-[#FFE5C0] text-lg sm:text-lg font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300">
-              REQUEST A FREE CONSULTATION →
-            </button>
-          </Link>
-        </div>
-      </section>
 
       {/* Recent Blog Posts */}
       {/* <section className="py-20 bg-[#FFF7EB]">

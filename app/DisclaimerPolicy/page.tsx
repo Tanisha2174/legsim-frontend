@@ -4,16 +4,16 @@ export default function DisclaimerPolicy() {
   return (
     <main className="bg-[#ffffff] flex flex-col min-h-screen">
   {/* Disclaimer Policy Content */}
-  <section className="w-full mx-auto flex-grow py-16 px-4 sm:px-6 lg:px-8">
-    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#462A03] pb-8 mb-6 text-center">
+  <section className="w-full mx-auto flex-grow py-10 sm:py-16 px-4 sm:px-8 lg:px-16">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#462A03] pb-6 mb-4 text-center">
       Disclaimer Policy
     </h1>
 
-    <div className="px-4 sm:px-8 md:px-32 lg:px-64">
-      <p className="text-2xl text-[#6C4104] mb-2">
+    <div className="px-4 sm:px-8 md:px-16 lg:px-32">
+      <p className="text-lg sm:text-xl md:text-2xl text-[#6C4104] mb-4 leading-relaxed">
         The information provided on LEGSIM’s website and in our services is for general informational purposes only.
       </p>
-      <p className="text-2xl text-[#6C4104] mb-6">
+      <p className="text-lg sm:text-xl md:text-2xl text-[#6C4104] mb-6 leading-relaxed">
         By using our website and services, you acknowledge and accept the following disclaimers.
       </p>
 
@@ -38,8 +38,8 @@ export default function DisclaimerPolicy() {
         }
       ].map((section, index) => (
         <div key={index}>
-          <h2 className="text-2xl font-bold text-[#462A03] mt-6">{section.title}</h2>
-          <p className="text-2xl text-[#6C4104] mt-4">
+          <h2 className="text-xl sm:text-2xl font-bold text-[#462A03] mt-6">{section.title}</h2>
+          <p className="text-lg sm:text-xl text-[#6C4104] mt-4 leading-relaxed">
             {section.content.map((point, idx) => (
               <span key={idx}>
                 {point}
@@ -50,11 +50,12 @@ export default function DisclaimerPolicy() {
         </div>
       ))}
 
-      <p className="text-2xl text-[#6C4104] mt-4">
+      <p className="text-lg sm:text-xl text-[#6C4104] mt-4 leading-relaxed">
         By continuing to use our services, you acknowledge that you have read, understood, and agree to this disclaimer.
       </p>
     </div>
   </section>
+
       {/* Footer */}
       <footer className="bg-[#462A03] text-[#FFE5C0]">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">

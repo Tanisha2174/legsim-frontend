@@ -4,16 +4,16 @@ export default function ConfidentialityPolicy() {
   return (
     <main className="bg-[#ffffff] flex flex-col min-h-screen">
   {/* Confidentiality Policy Content */}
-  <section className="w-full flex-grow mx-auto py-16 px-4 sm:px-6 lg:px-8">
-    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#462A03] pb-8 mb-6 text-center">
+  <section className="w-full flex-grow mx-auto py-10 sm:py-16 px-4 sm:px-8 lg:px-16">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#462A03] pb-6 mb-4 text-center">
       Confidentiality Policy
     </h1>
 
-    <div className="px-4 sm:px-8 md:px-32 lg:px-64">
-      <p className="text-2xl text-[#6C4104] mb-2">
+    <div className="px-4 sm:px-8 md:px-16 lg:px-32">
+      <p className="text-lg sm:text-xl md:text-2xl text-[#6C4104] mb-4 leading-relaxed">
         LEGSIM values the confidentiality of our clients and their information. This policy outlines how we protect your confidential information.
       </p>
-      <p className="text-2xl text-[#6C4104] mb-6">
+      <p className="text-lg sm:text-xl md:text-2xl text-[#6C4104] mb-6 leading-relaxed">
         By using our services, you acknowledge and agree to our confidentiality practices.
       </p>
 
@@ -38,8 +38,8 @@ export default function ConfidentialityPolicy() {
         }
       ].map((section, index) => (
         <div key={index}>
-          <h2 className="text-2xl font-bold text-[#462A03] mt-6">{section.title}</h2>
-          <p className="text-2xl text-[#6C4104] mt-4">
+          <h2 className="text-xl sm:text-2xl font-bold text-[#462A03] mt-6">{section.title}</h2>
+          <p className="text-lg sm:text-xl text-[#6C4104] mt-4 leading-relaxed">
             {section.content.map((point, idx) => (
               <span key={idx}>
                 {point}
@@ -50,11 +50,12 @@ export default function ConfidentialityPolicy() {
         </div>
       ))}
 
-      <p className="text-2xl text-[#6C4104] mt-4">
+      <p className="text-lg sm:text-xl text-[#6C4104] mt-4 leading-relaxed">
         By using our services, you consent to the collection and processing of your confidential information as outlined.
       </p>
     </div>
   </section>
+
       {/* Footer */}
       <footer className="bg-[#462A03] text-[#FFE5C0]">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
