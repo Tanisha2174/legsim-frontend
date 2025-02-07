@@ -31,6 +31,7 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
+{/* Hero Section */}
 <div className="relative min-h-[calc(100vh-24rem)] sm:min-h-[calc(100vh-24rem)] md:min-h-[calc(100vh-8rem)]">
   <div className="absolute inset-0">
     <img
@@ -42,10 +43,10 @@ export default function Home() {
   </div>
 
   <div className="relative w-full px-4 sm:px-6 lg:px-8 pt-2"> {/* Reduced top padding */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-10 items-center min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-32rem)]">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-1 sm:gap-10 items-center min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-20rem)]">
       
       {/* Left Column - Logo */}
-      <div className="flex flex-col items-center px-4 md:px-20 space-y-1 sm:space-y-6"> {/* Reduced spacing for mobile */}
+      <div className="flex flex-col items-center px-4 md:px-20"> {/* Removed space-y */}
         {/* Mobile Logo Image */}
         <img
           src="/images/legsim_mobile.png"
@@ -62,7 +63,7 @@ export default function Home() {
       </div>
 
       {/* Right Column - Text Content */}
-      <div className="text-[#FFE5C0] text-center md:text-left space-y-2 sm:space-y-6 px-4 md:px-0"> {/* Reduced spacing for mobile */}
+      <div className="text-[#FFE5C0] text-center md:text-left space-y-0 sm:space-y-6 px-4 md:px-0 -mt-2"> {/* Pulled text closer to the image */}
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight">
           Growing Businesses.<br />
           Protecting Legacies.
@@ -71,16 +72,16 @@ export default function Home() {
           Understanding Your Business <br />
           and Protecting Assets
         </p>
-        <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-4 pt-2 sm:pt-4"> {/* Reduced padding for mobile */}
+        <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-4 pt-1 sm:pt-4"> {/* Reduced padding */}
           <Link href="/contact-us">
-            <Button className="bg-[#AC6604] hover:bg-[#462A03] text-[#ffffff] text-sm font-normal px-6 sm:px-10 py-3 sm:py-4 rounded-md w-full md:w-auto">
+            <Button className="bg-[#AC6604] hover:bg-[#462A03] text-[#ffffff] text-lg font-normal px-6 sm:px-10 py-3 sm:py-4 rounded-md w-full md:w-auto">
               CONTACT US
             </Button>
           </Link>
           <Link href="/contact-us">
             <Button
               variant="outline"
-              className="text-[#462A03] border-[#FFE5C0] hover:bg-[#FFE5C0]/10 text-sm font-normal px-6 sm:px-10 py-3 sm:py-4 rounded-md w-full md:w-auto mt-2 md:mt-0"
+              className="text-[#462A03] border-[#FFE5C0] hover:bg-[#FFE5C0]/10 text-lg font-normal px-6 sm:px-10 py-3 sm:py-4 rounded-md w-full md:w-auto mt-2 md:mt-0"
             >
               FREE CONSULTATION
             </Button>
@@ -90,6 +91,7 @@ export default function Home() {
     </div>
   </div>
 </div>
+
 
 
       {/* Who We Help Section */}
