@@ -11,11 +11,11 @@ export function MainNav() {
   return (
     <div className="sticky top-0 z-50">
       {/* Top Bar */}
-      <div className="bg-[#ffffff] text-[#000000] py-4">
-        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <div className="bg-[#ffffff] text-[#000000] py-2 sm:py-4"> {/* Reduced padding */}
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-14 sm:h-16"> {/* Reduced height */}
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <img src="/images/logo.png" alt="Logo" className="h-16" />
+            <img src="/images/logo.png" alt="Logo" className="h-12 sm:h-16" /> {/* Reduced logo size */}
           </Link>
           <span className="hidden md:block text-xl font-semibold">
             Available 24/7 | Free Consultations
@@ -33,7 +33,7 @@ export function MainNav() {
             className="md:hidden text-[#462A03] focus:outline-none"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X size={30} /> : <Menu size={30} />}
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />} {/* Reduced icon size */}
           </button>
         </div>
       </div>
@@ -41,7 +41,7 @@ export function MainNav() {
       {/* Main Navigation */}
       <nav className="bg-[#FFE5C0] border-b border-[#AC6604]">
         <div className="w-full px-4 sm:px-6 lg:px-8">
-          <div className="hidden md:flex items-center justify-evenly h-16">
+          <div className="hidden md:flex items-center justify-evenly h-14 sm:h-16"> {/* Reduced height */}
             <Link href="/" className="text-[#462A03] hover:text-[#AC6604] text-xl font-medium">
               Home
             </Link>
@@ -54,11 +54,13 @@ export function MainNav() {
               className="relative group"
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
-            ><Link href="/practice-areas">
-              <button className="flex items-center text-[#462A03] hover:text-[#AC6604] text-lg font-medium focus:outline-none">
-                Practice Areas & Focus
-                <ChevronDown className="ml-1 h-5 w-5" />
-              </button></Link>
+            >
+              <Link href="/practice-areas">
+                <button className="flex items-center text-[#462A03] hover:text-[#AC6604] text-lg font-medium focus:outline-none">
+                  Practice Areas & Focus
+                  <ChevronDown className="ml-1 h-5 w-5" />
+                </button>
+              </Link>
               {isDropdownOpen && (
                 <div className="absolute left-0 mt-2 w-72 bg-[#FFE5C0] rounded-md shadow-lg py-2 z-50">
                   {[
@@ -99,7 +101,7 @@ export function MainNav() {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-[#FFE5C0] px-4 py-4 space-y-3">
+          <div className="md:hidden bg-[#FFE5C0] px-4 py-2 space-y-2"> {/* Reduced padding & spacing */}
             <Link
               href="/"
               className="block text-[#462A03] hover:text-[#AC6604] text-lg font-medium"
@@ -116,15 +118,17 @@ export function MainNav() {
             </Link>
 
             {/* Mobile Dropdown Menu */}
-            <Link href="/practice-areas"><button
-              className="flex items-center justify-between w-full text-[#462A03] hover:text-[#AC6604] text-lg font-medium"
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            >
-              Practice Areas & Focus
-              <ChevronDown className="h-5 w-5" />
-            </button></Link>
+            <Link href="/practice-areas">
+              <button
+                className="flex items-center justify-between w-full text-[#462A03] hover:text-[#AC6604] text-lg font-medium"
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              >
+                Practice Areas & Focus
+                <ChevronDown className="h-5 w-5" />
+              </button>
+            </Link>
             {isDropdownOpen && (
-              <div className="pl-4 space-y-2">
+              <div className="pl-4 space-y-1"> {/* Reduced spacing */}
                 {[
                   "Company Registration",
                   "IPR Registration",

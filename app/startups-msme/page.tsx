@@ -61,10 +61,10 @@ export default function StartupsAndMSME() {
       <section className="w-full mx-auto flex-grow px-4 md:px-32 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#462A03] leading-tight">
+            <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold text-[#462A03] leading-tight">
               {data.hero.title}
             </h1>
-            <p className="text-[#6C4104] text-xl sm:text-2xl mt-6">
+            <p className="text-[#6C4104] text-xl sm:text-xl mt-6">
               {data.hero.description}
             </p>
           </div>

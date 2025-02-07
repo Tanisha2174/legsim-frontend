@@ -215,16 +215,16 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-[#FFE5C0]/50 backdrop-blur-sm"></div>
         <div className="relative w-full px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl font-extrabold mb-4 text-[#462A03]">
+          <h2 className="text-4xl sm:text-4xl font-extrabold mb-4 text-[#462A03]">
             REQUEST A FREE CONSULTATION
           </h2>
-          <p className="text-[#6C4104] max-w-3xl mx-auto text-lg sm:text-xl font-medium">
+          <p className="text-[#6C4104] max-w-3xl mx-auto text-lg sm:text-lg font-medium">
           LEGSIM  is your trusted legal partner, providing expert guidance to startups, entrepreneurs, and established businesses. Whether you need assistance with company registration, intellectual property protection, compliance, or legal disputes, our experienced team offers tailored solutions to meet your specific needs.
 
 We simplify complex legal processes, ensuring your business stays protected and compliant. With a client-centric approach, we prioritize transparency, efficiency, and strategic advice to help your business thrive.
           </p>
           <Link href="/contact-us">
-            <button className="mt-6 bg-[#462A03] hover:bg-[#6C4104] text-[#FFE5C0] text-lg sm:text-xl font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300">
+            <button className="mt-6 bg-[#462A03] hover:bg-[#6C4104] text-[#FFE5C0] text-lg sm:text-lg font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300">
               REQUEST A FREE CONSULTATION →
             </button>
           </Link>

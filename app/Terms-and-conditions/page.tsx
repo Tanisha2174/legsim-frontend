@@ -3,105 +3,106 @@
 export default function TermsConditions() {
   return (
     <main className="bg-[#ffffff] flex flex-col min-h-screen">
-      {/* Terms & Conditions Content */}
-      <section className="w-full mx-auto flex-grow py-16 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#462A03] pb-8 mb-6 text-center">
-          Terms & Conditions
-        </h1>
+  {/* Terms & Conditions Content */}
+  <section className="w-full mx-auto flex-grow py-10 sm:py-16 px-4 sm:px-8 lg:px-16">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#462A03] pb-6 mb-4 text-center">
+      Terms & Conditions
+    </h1>
 
-        <div className="px-4 sm:px-8 md:px-32 lg:px-64">
-          <p className="text-2xl text-[#6C4104] mb-2">
-            Welcome to LEGSIM. By accessing and using our website, services, and resources, you agree to comply with and be bound by the following terms and conditions.
-          </p>
-          <p className="text-2xl text-[#6C4104] mb-6">
-            Please read them carefully before proceeding. If you do not agree with any part of these terms, you should refrain from using our services.
-          </p>
+    <div className="px-4 sm:px-8 md:px-16 lg:px-32">
+      <p className="text-lg sm:text-xl md:text-2xl text-[#6C4104] mb-4 leading-relaxed">
+        Welcome to LEGSIM. By accessing and using our website, services, and resources, you agree to comply with and be bound by the following terms and conditions.
+      </p>
+      <p className="text-lg sm:text-xl md:text-2xl text-[#6C4104] mb-6 leading-relaxed">
+        Please read them carefully before proceeding. If you do not agree with any part of these terms, you should refrain from using our services.
+      </p>
 
-          {[
-            {
-              title: "1. General Terms",
-              content: [
-                "1.1 These terms and conditions govern your use of LEGSIM’s website and legal services.",
-                "1.2 We reserve the right to update, modify, or change these terms at any time without prior notice. It is your responsibility to review these terms regularly.",
-                "1.3 Our services are provided 'as is' without any warranties or guarantees of success in legal matters."
-              ]
-            },
-            {
-              title: "2. Eligibility & Use of Services",
-              content: [
-                "2.1 Our legal services are available to individuals, startups, businesses, and organizations seeking legal assistance within our areas of expertise.",
-                "2.2 You agree to provide accurate and truthful information when engaging our services or submitting inquiries.",
-                "2.3 You shall not use our services for any unlawful activities, fraud, misrepresentation, or violation of intellectual property rights."
-              ]
-            },
-            {
-              title: "3. Company Name Registration & Compliance",
-              content: [
-                "3.1 Uniqueness: Company names registered through our services must not be identical or misleadingly similar to existing businesses or trademarks.",
-                "3.2 Restricted Names: Certain names may be prohibited under the Companies Act 2013, including names that are offensive, deceptive, or misleading.",
-                "3.3 Approval Process: The final approval of any company name is subject to government regulations and Registrar of Companies (RoC) verification."
-              ]
-            },
-            {
-              title: "4. Intellectual Property Rights (IPR) Protection",
-              content: [
-                "4.1 We assist in trademark, patent, and copyright registration to protect your brand and intellectual assets.",
-                "4.2 LEGSIM does not guarantee the approval of any application by government authorities, as it depends on legal examination and compliance.",
-                "4.3 Clients must ensure that their applications do not infringe on existing intellectual property rights."
-              ]
-            },
-            {
-              title: "5. Service Fees & Payment Terms",
-              content: [
-                "5.1 Our fees are transparent and displayed on our website or provided in official quotations.",
-                "5.2 Payments must be made in full before the commencement of services, unless otherwise agreed upon.",
-                "5.3 All fees are exclusive of government taxes and regulatory charges, which must be borne by the client.",
-                "5.4 Refunds are processed only under exceptional circumstances where LEGSIM is unable to deliver the agreed-upon services."
-              ]
-            },
-            {
-              title: "6. Limitation of Liability",
-              content: [
-                "6.1 LEGSIM provides legal consultation and support services, but we do not offer direct representation in courts or legal proceedings.",
-                "6.2 We shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use of our services.",
-                "6.3 We do not guarantee specific legal outcomes, as they depend on regulatory authorities and legal frameworks."
-              ]
-            },
-            {
-              title: "7. Confidentiality & Data Protection",
-              content: [
-                "7.1 We prioritize the confidentiality of client information and take reasonable measures to protect it.",
-                "7.2 By using our services, you consent to LEGSIM collecting and processing your data in accordance with our Privacy Policy.",
-                "7.3 We do not sell, share, or misuse your personal or business information."
-              ]
-            },
-            {
-              title: "8. Governing Law & Dispute Resolution",
-              content: [
-                "8.1 These terms and conditions are governed by the laws of India.",
-                "8.2 Any disputes shall be first attempted to be resolved through negotiation or mediation. If unresolved, they shall be subject to the jurisdiction of courts in New Delhi, India."
-              ]
-            }
-          ].map((section, index) => (
-            <div key={index}>
-              <h2 className="text-2xl font-bold text-[#462A03] mt-6">{section.title}</h2>
-              <p className="text-2xl text-[#6C4104] mt-4">
-                {section.content.map((point, idx) => (
-                  <span key={idx}>
-                    {point}
-                    <br />
-                  </span>
-                ))}
-              </p>
-            </div>
-          ))}
-
-          <p className="text-2xl text-[#6C4104] mt-6">
-            If you have any questions regarding these Terms & Conditions, you may contact us.<br />
-            By continuing to use our services, you acknowledge that you have read, understood, and agree to be bound by these Terms & Conditions.
+      {[
+        {
+          title: "1. General Terms",
+          content: [
+            "1.1 These terms and conditions govern your use of LEGSIM’s website and legal services.",
+            "1.2 We reserve the right to update, modify, or change these terms at any time without prior notice. It is your responsibility to review these terms regularly.",
+            "1.3 Our services are provided 'as is' without any warranties or guarantees of success in legal matters."
+          ]
+        },
+        {
+          title: "2. Eligibility & Use of Services",
+          content: [
+            "2.1 Our legal services are available to individuals, startups, businesses, and organizations seeking legal assistance within our areas of expertise.",
+            "2.2 You agree to provide accurate and truthful information when engaging our services or submitting inquiries.",
+            "2.3 You shall not use our services for any unlawful activities, fraud, misrepresentation, or violation of intellectual property rights."
+          ]
+        },
+        {
+          title: "3. Company Name Registration & Compliance",
+          content: [
+            "3.1 Uniqueness: Company names registered through our services must not be identical or misleadingly similar to existing businesses or trademarks.",
+            "3.2 Restricted Names: Certain names may be prohibited under the Companies Act 2013, including names that are offensive, deceptive, or misleading.",
+            "3.3 Approval Process: The final approval of any company name is subject to government regulations and Registrar of Companies (RoC) verification."
+          ]
+        },
+        {
+          title: "4. Intellectual Property Rights (IPR) Protection",
+          content: [
+            "4.1 We assist in trademark, patent, and copyright registration to protect your brand and intellectual assets.",
+            "4.2 LEGSIM does not guarantee the approval of any application by government authorities, as it depends on legal examination and compliance.",
+            "4.3 Clients must ensure that their applications do not infringe on existing intellectual property rights."
+          ]
+        },
+        {
+          title: "5. Service Fees & Payment Terms",
+          content: [
+            "5.1 Our fees are transparent and displayed on our website or provided in official quotations.",
+            "5.2 Payments must be made in full before the commencement of services, unless otherwise agreed upon.",
+            "5.3 All fees are exclusive of government taxes and regulatory charges, which must be borne by the client.",
+            "5.4 Refunds are processed only under exceptional circumstances where LEGSIM is unable to deliver the agreed-upon services."
+          ]
+        },
+        {
+          title: "6. Limitation of Liability",
+          content: [
+            "6.1 LEGSIM provides legal consultation and support services, but we do not offer direct representation in courts or legal proceedings.",
+            "6.2 We shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use of our services.",
+            "6.3 We do not guarantee specific legal outcomes, as they depend on regulatory authorities and legal frameworks."
+          ]
+        },
+        {
+          title: "7. Confidentiality & Data Protection",
+          content: [
+            "7.1 We prioritize the confidentiality of client information and take reasonable measures to protect it.",
+            "7.2 By using our services, you consent to LEGSIM collecting and processing your data in accordance with our Privacy Policy.",
+            "7.3 We do not sell, share, or misuse your personal or business information."
+          ]
+        },
+        {
+          title: "8. Governing Law & Dispute Resolution",
+          content: [
+            "8.1 These terms and conditions are governed by the laws of India.",
+            "8.2 Any disputes shall be first attempted to be resolved through negotiation or mediation. If unresolved, they shall be subject to the jurisdiction of courts in New Delhi, India."
+          ]
+        }
+      ].map((section, index) => (
+        <div key={index}>
+          <h2 className="text-xl sm:text-2xl font-bold text-[#462A03] mt-6">{section.title}</h2>
+          <p className="text-lg sm:text-xl text-[#6C4104] mt-4 leading-relaxed">
+            {section.content.map((point, idx) => (
+              <span key={idx}>
+                {point}
+                <br />
+              </span>
+            ))}
           </p>
         </div>
-      </section>
+      ))}
+
+      <p className="text-lg sm:text-xl text-[#6C4104] mt-6 leading-relaxed">
+        If you have any questions regarding these Terms & Conditions, you may contact us.<br />
+        By continuing to use our services, you acknowledge that you have read, understood, and agree to be bound by these Terms & Conditions.
+      </p>
+    </div>
+  </section>
+
 
       {/* Footer */}
       <footer className="bg-[#462A03] text-[#FFE5C0]">
