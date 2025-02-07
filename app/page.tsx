@@ -275,53 +275,54 @@ We simplify complex legal processes, ensuring your business stays protected and 
       </section> */}
 
       {/* Client Testimonials */}
-      <section id="reviews" className="py-24 bg-[#FDFBF8]">
-  <div className="max-w-[1400px] mx-auto px-8 lg:px-16 ">
+      <section id="reviews" className="py-16 sm:py-24 bg-[#FDFBF8]">
+  <div className="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-16">
 
     {/* Section Heading */}
-    <div className="flex items-center justify-center">
-      <div className="w-80 border-t-2 pb-20 border-[#462A03]"></div> {/* Shortened line */}
-      <h2 className="text-4xl pb-20 font-bold mx-4 text-[#462A03]">WHAT OUR CLIENT'S SAY</h2>
-      <div className="w-80 border-t-2 pb-20 border-[#462A03]"></div>
+    <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left">
+      <div className="w-20 sm:w-80 border-t-2 border-[#462A03] mb-6 sm:mb-0"></div> {/* Shortened line for mobile */}
+      <h2 className="text-3xl sm:text-4xl font-bold mx-4 text-[#462A03]">WHAT OUR CLIENTS SAY</h2>
+      <div className="w-20 sm:w-80 border-t-2 border-[#462A03] mt-6 sm:mt-0"></div>
     </div>
 
     {/* Testimonial Grid */}
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
-      <div className="bg-[#FFF7EB] p-12 rounded-3xl shadow-xl">
-        <div className="text-8xl text-[#462A03] mb-6">❝</div>
-        <h3 className="font-bold text-[#462A03] text-3xl mb-6 leading-snug">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-16 mt-12">
+      <div className="bg-[#FFF7EB] p-6 sm:p-12 rounded-3xl shadow-xl">
+        <div className="text-6xl sm:text-8xl text-[#462A03] mb-4 sm:mb-6">❝</div>
+        <h3 className="font-bold text-[#462A03] text-2xl sm:text-3xl mb-4 sm:mb-6 leading-snug">
           A life-changing experience
         </h3>
-        <p className="text-[#6C4104] text-xl leading-relaxed mb-8">
-          Thanks to LEGSIM, I was able to resolve a long-standing legal issue that had been weighing me down for years. Their team was highly professional and compassionate throughout the process, making it easier for me to navigate through.
+        <p className="text-[#6C4104] text-lg sm:text-xl leading-relaxed mb-6 sm:mb-8">
+          Thanks to LEGSIM, I was able to resolve a long-standing legal issue that had been weighing me down for years. Their team was highly professional and compassionate throughout the process.
         </p>
-        <div className="text-[#6C4104] text-xl font-semibold mb-6">— Emma Williams</div>
+        <div className="text-[#6C4104] text-lg sm:text-xl font-semibold mb-4 sm:mb-6">— Emma Williams</div>
       </div>
 
-      <div className="bg-[#FFF7EB] p-12 rounded-3xl shadow-xl">
-        <div className="text-8xl text-[#462A03] mb-6">❝</div>
-        <h3 className="font-bold text-[#462A03] text-3xl mb-6 leading-snug">
+      <div className="bg-[#FFF7EB] p-6 sm:p-12 rounded-3xl shadow-xl">
+        <div className="text-6xl sm:text-8xl text-[#462A03] mb-4 sm:mb-6">❝</div>
+        <h3 className="font-bold text-[#462A03] text-2xl sm:text-3xl mb-4 sm:mb-6 leading-snug">
           Excellent legal support
         </h3>
-        <p className="text-[#6C4104] text-xl leading-relaxed mb-8">
-          The team at LEGSIM was exceptional in handling my case. They were always available for questions, provided clear explanations, and most importantly, they achieved a great outcome. I couldn’t have asked for better service.
+        <p className="text-[#6C4104] text-lg sm:text-xl leading-relaxed mb-6 sm:mb-8">
+          The team at LEGSIM was exceptional in handling my case. They provided clear explanations and achieved a great outcome. I couldn’t have asked for better service.
         </p>
-        <div className="text-[#6C4104] text-xl font-semibold mb-6">— Johnathan Marks</div>
+        <div className="text-[#6C4104] text-lg sm:text-xl font-semibold mb-4 sm:mb-6">— Johnathan Marks</div>
       </div>
 
-      <div className="bg-[#FFF7EB] p-12 rounded-3xl shadow-xl">
-        <div className="text-8xl text-[#462A03] mb-6">❝</div>
-        <h3 className="font-bold text-[#462A03] text-3xl mb-6 leading-snug">
+      <div className="bg-[#FFF7EB] p-6 sm:p-12 rounded-3xl shadow-xl">
+        <div className="text-6xl sm:text-8xl text-[#462A03] mb-4 sm:mb-6">❝</div>
+        <h3 className="font-bold text-[#462A03] text-2xl sm:text-3xl mb-4 sm:mb-6 leading-snug">
           Professional and Reliable
         </h3>
-        <p className="text-[#6C4104] text-xl leading-relaxed mb-8">
-          I was impressed by the level of professionalism and reliability shown by LEGSIM. They handled everything smoothly, offering consistent support, and I felt confident that my interests were always being prioritized.
+        <p className="text-[#6C4104] text-lg sm:text-xl leading-relaxed mb-6 sm:mb-8">
+          I was impressed by the level of professionalism and reliability shown by LEGSIM. They handled everything smoothly, offering consistent support.
         </p>
-        <div className="text-[#6C4104] text-xl font-semibold mb-6">— Sarah Lee</div>
+        <div className="text-[#6C4104] text-lg sm:text-xl font-semibold mb-4 sm:mb-6">— Sarah Lee</div>
       </div>
     </div>
   </div>
 </section>
+
 
 
       {/* Footer */}
