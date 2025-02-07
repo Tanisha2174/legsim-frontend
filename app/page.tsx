@@ -109,7 +109,7 @@ export default function Home() {
     {/* First Row - Text and Image */}
     <div className="grid grid-cols-1 md:grid-cols-2 pl-0 md:pl-20 gap-8 mt-8 sm:mt-4 md:mt-10">
       {/* Left Column - Text */}
-      <div className="bg-[#ffffff] px-6 py-8 md:p-20 rounded-lg shadow-sm text-center md:text-left">
+      <div className="bg-[#ffffff] px-6 py-8 md:p-20 rounded-lg text-center md:text-left">
         <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 md:mb-4 text-[#462A03]">
           Small to large enterprises,
         </h3>
