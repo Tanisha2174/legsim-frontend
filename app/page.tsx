@@ -218,7 +218,7 @@ export default function Home() {
     <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 text-[#462A03]">
       REQUEST A FREE CONSULTATION
     </h2>
-    <p className="text-[#6C4104] max-w-3xl mx-auto text-xl sm:text-lg font-medium leading-relaxed">
+    <p className="text-[#6C4104] max-w-3xl mx-auto text-base md:text-xl sm:text-lg font-medium leading-relaxed">
       LEGSIM is your trusted legal partner, providing expert guidance to startups, entrepreneurs, and
       established businesses. Whether you need assistance with company registration, intellectual
       property protection, compliance, or legal disputes, our experienced team offers tailored
