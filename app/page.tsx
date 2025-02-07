@@ -107,7 +107,7 @@ export default function Home() {
 </div>
 
     {/* First Row - Text and Image */}
-    <div className="grid grid-cols-1 md:grid-cols-2 pl-0 md:pl-20 gap-8 mt-8 md:mt-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 pl-0 md:pl-20 gap-8 mt-8 sm:mt-4 md:mt-10">
       {/* Left Column - Text */}
       <div className="bg-[#ffffff] px-6 py-8 md:p-20 rounded-lg shadow-sm text-center md:text-left">
         <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 md:mb-4 text-[#462A03]">
@@ -289,7 +289,7 @@ export default function Home() {
     {/* Section Heading */}
     <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left">
       <div className="w-20 sm:w-80 border-t-2 border-[#462A03] mb-6 sm:mb-0"></div> {/* Shortened line for mobile */}
-      <h2 className="text-3xl sm:text-4xl font-bold mx-4 text-[#462A03]">WHAT OUR CLIENTS SAY</h2>
+      <h2 className="text-3xl sm:text-4xl font-bold mx-4 text-[#462A03]">WHAT OUR CLIENT'S SAY</h2>
       <div className="w-20 sm:w-80 border-t-2 border-[#462A03] mt-6 sm:mt-0"></div>
     </div>
 
