@@ -98,26 +98,28 @@ export default function Home() {
       <section className="py-20 bg-[#ffffff]">
   <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
     {/* Section Title with Shorter Horizontal Line */}
-    <div className="flex items-center justify-center">
-      <div className="w-80 border-t-2 border-[#AC6604]"></div>
-      <h2 className="text-2xl md:text-4xl sm:text-2xl font-semibold mx-4 text-[#AC6604]">WHO WE HELP</h2>
-      <div className="w-80 border-t-2 border-[#AC6604]"></div>
-    </div>
+    <div className="flex flex-wrap items-center justify-center text-center">
+  <div className="w-16 sm:w-32 md:w-80 border-t-2 border-[#AC6604]"></div>
+  <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mx-4 text-[#AC6604]">
+    WHO WE HELP
+  </h2>
+  <div className="w-16 sm:w-32 md:w-80 border-t-2 border-[#AC6604]"></div>
+</div>
 
     {/* First Row - Text and Image */}
     <div className="grid grid-cols-1 md:grid-cols-2 pl-0 md:pl-20 gap-8 mt-10">
       {/* Left Column - Text */}
       <div className="bg-[#ffffff] px-6 py-8 md:p-20 rounded-lg shadow-sm text-center md:text-left">
-        <h3 className="text-xl sm:text-xl md:text-5xl font-extrabold md:pl-64 mb-4 text-[#462A03]">
+        <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 mb-4 text-[#462A03]">
           Small to large enterprises,
         </h3>
-        <h3 className="text-xl sm:text-xl md:text-5xl font-extrabold md:pl-64 mb-4 text-[#462A03]">
+        <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 mb-4 text-[#462A03]">
           Entrepreneurs, Individuals
         </h3>
-        <h3 className="text-xl sm:text-xl md:text-5xl font-extrabold md:pl-64 mb-4 text-[#462A03]">
+        <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 mb-4 text-[#462A03]">
           Seeking Legal Support,
         </h3>
-        <h3 className="text-xl sm:text-xl md:text-5xl font-extrabold md:pl-64 mb-4 text-[#462A03]">
+        <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 mb-4 text-[#462A03]">
           NGOs & Trusts
         </h3>
       </div>
