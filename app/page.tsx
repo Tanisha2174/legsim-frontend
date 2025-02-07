@@ -50,7 +50,7 @@ export default function Home() {
         <img
           src="/images/legsim_mobile.png"
           alt="Legsim Logo"
-          className="w-[100%] sm:w-[100%] md:hidden h-auto"  // Increased width
+          className="w-[100%] sm:w-full md:hidden h-full"  // Increased width
         />
 
         {/* Desktop Logo Image */}
