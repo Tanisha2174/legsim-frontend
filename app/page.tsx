@@ -74,14 +74,14 @@ export default function Home() {
         </p>
         <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-4 pt-1 sm:pt-4">
           <Link href="/contact-us">
-            <Button className="bg-[#AC6604] hover:bg-[#462A03] text-[#ffffff] text-lg sm:text-sm md:text-lg font-normal px-6 sm:px-10 py-3 sm:py-4 rounded-md w-full md:w-auto">
+            <Button className="bg-[#AC6604] hover:bg-[#462A03] text-[#ffffff] text-base sm:text-sm md:text-lg font-normal px-6 sm:px-10 py-3 sm:py-4 rounded-md w-full md:w-auto">
               CONTACT US
             </Button>
           </Link>
           <Link href="/contact-us">
             <Button
               variant="outline"
-              className="text-[#462A03] border-[#FFE5C0] hover:bg-[#FFE5C0]/10 text-lg sm:text-sm md:text-lg font-normal px-6 sm:px-10 py-3 sm:py-4 rounded-md w-full md:w-auto mt-2 md:mt-0"
+              className="text-[#462A03] border-[#FFE5C0] hover:bg-[#FFE5C0]/10 text-base sm:text-sm md:text-lg font-normal px-6 sm:px-10 py-3 sm:py-4 rounded-md w-full md:w-auto mt-2 md:mt-0"
             >
               FREE CONSULTATION
             </Button>
