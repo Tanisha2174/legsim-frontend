@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <div className="relative min-h-[calc(100vh-24rem)] sm:min-h-[calc(100vh-24rem)] md:min-h-[calc(100vh-8rem)]">
+<div className="relative min-h-[calc(100vh-24rem)] sm:min-h-[calc(100vh-24rem)] md:min-h-[calc(100vh-8rem)]">
   <div className="absolute inset-0">
     <img
       src="/images/image.jpg"
@@ -42,27 +42,27 @@ export default function Home() {
   </div>
 
   <div className="relative w-full px-4 sm:px-6 lg:px-8 pt-2"> {/* Reduced top padding */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 items-center min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-20rem)]">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-10 items-center min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-20rem)]">
+      
       {/* Left Column - Logo */}
-      <div className="flex flex-col items-center px-4 md:px-20 space-y-2 sm:space-y-6"> {/* Reduced spacing for mobile */}
+      <div className="flex flex-col items-center px-4 md:px-20 space-y-1 sm:space-y-6"> {/* Reduced spacing for mobile */}
         {/* Mobile Logo Image */}
         <img
           src="/images/legsim_mobile.png"
           alt="Legsim Logo"
-          className="w-[70%] sm:w-[80%] md:hidden h-auto"  // Adjusted width and removed bottom margin
+          className="w-[90%] sm:w-[80%] md:hidden h-auto"  // Increased width
         />
 
         {/* Desktop Logo Image */}
         <img
           src="/images/legsim.png"
           alt="Legsim Logo"
-          className="w-[80%] sm:w-[75%] md:w-[150%] h-auto md:block hidden"  // Desktop logo visible
+          className="w-[80%] sm:w-[75%] md:w-[150%] h-auto md:block hidden"
         />
       </div>
 
       {/* Right Column - Text Content */}
-      <div className="text-[#FFE5C0] text-center md:text-left space-y-3 sm:space-y-6 px-4 md:px-0"> {/* Reduced spacing for mobile */}
-        {/* Smaller text for mobile */}
+      <div className="text-[#FFE5C0] text-center md:text-left space-y-2 sm:space-y-6 px-4 md:px-0"> {/* Reduced spacing for mobile */}
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight">
           Growing Businesses.<br />
           Protecting Legacies.
@@ -90,6 +90,7 @@ export default function Home() {
     </div>
   </div>
 </div>
+
 
       {/* Who We Help Section */}
       <section className="py-20 bg-[#ffffff]">
