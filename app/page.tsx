@@ -110,16 +110,16 @@ export default function Home() {
     <div className="grid grid-cols-1 md:grid-cols-2 pl-0 md:pl-20 gap-8 mt-10 sm:mt-4 md:mt-10">
       {/* Left Column - Text */}
       <div className="bg-[#ffffff] px-6 py-8 md:p-20 rounded-lg text-center md:text-left">
-        <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 md:mb-4 mb-4 text-[#462A03]">
+        <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 md:mb-4 text-[#462A03]">
           Small to large enterprises,
         </h3>
-        <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 md:mb-4 mb-4 text-[#462A03]">
+        <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 md:mb-4 text-[#462A03]">
           Entrepreneurs, Individuals
         </h3>
-        <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 md:mb-4 mb-4 text-[#462A03]">
+        <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 md:mb-4 text-[#462A03]">
           Seeking Legal Support,
         </h3>
-        <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 md:mb-4 mb-4 text-[#462A03]">
+        <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 md:mb-4 text-[#462A03]">
           NGOs & Trusts
         </h3>
       </div>
@@ -218,7 +218,7 @@ export default function Home() {
     <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 text-[#462A03]">
       REQUEST A FREE CONSULTATION
     </h2>
-    <p className="text-[#6C4104] max-w-3xl mx-auto text-base sm:text-lg font-medium leading-relaxed">
+    <p className="text-[#6C4104] max-w-3xl mx-auto text-xl sm:text-lg font-medium leading-relaxed">
       LEGSIM is your trusted legal partner, providing expert guidance to startups, entrepreneurs, and
       established businesses. Whether you need assistance with company registration, intellectual
       property protection, compliance, or legal disputes, our experienced team offers tailored
