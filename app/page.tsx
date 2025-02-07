@@ -113,13 +113,13 @@ export default function Home() {
         <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 md:mb-4 mb-4 text-[#462A03]">
           Small to large enterprises,
         </h3>
-        <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 md:mb-4 text-[#462A03]">
+        <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 md:mb-4 mb-4 text-[#462A03]">
           Entrepreneurs, Individuals
         </h3>
-        <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 md:mb-4 text-[#462A03]">
+        <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 md:mb-4 mb-4 text-[#462A03]">
           Seeking Legal Support,
         </h3>
-        <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 md:mb-4 text-[#462A03]">
+        <h3 className="text-2xl sm:text-2xl md:text-5xl font-extrabold md:pl-64 md:mb-4 mb-4 text-[#462A03]">
           NGOs & Trusts
         </h3>
       </div>
